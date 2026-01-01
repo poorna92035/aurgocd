@@ -4,7 +4,7 @@ kind: Service
 metadata:
   name: poorna-service
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: nginx
   ports:
