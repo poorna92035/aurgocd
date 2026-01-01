@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: poorna-deployment
+  name: nginx-deployment
   labels:
     app: nginx
 spec:
@@ -13,19 +13,16 @@ spec:
   template:
     metadata:
       labels:
-        app: poorna
+        app: nginx
     spec:
       containers:
-        - name: poorna-app
+        - name: nginx
           image: nginx:latest
           ports:
             - name: http
-              containerPort: 8080
+              containerPort: 80
               protocol: TCP
-          # Optional: set resources, env, probes, etc.
-          # resources:
-          #   requests:
-          #     cpu: "100m"
-          #     memory: "128Mi"
-                   #   limits:
-          #     cpu: "500m"
+          # Example env with colon in value (properly quoted or single line)
+          env:
+            - name: BASE_URL
+             
