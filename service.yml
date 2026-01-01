@@ -8,8 +8,8 @@ metadata:
 spec:
   selector:
     app: nginx
-  type: LoadBalancer   # For GKE external IP
+  type: LoadBalancer
   ports:
-    - name: http
+       - name: http
       protocol: TCP
-           port: 80
+      port: 80
