@@ -1,4 +1,4 @@
-
+---
 apiVersion: v1
 kind: Service
 metadata:
@@ -11,4 +11,4 @@ spec:
     - name: http
       port: 80
       targetPort: 8080
-      nodePort: 30080    # Must be within cluster’s allowed range (default 30000-327
+      nodePort: 30080
